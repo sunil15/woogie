@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Logo settings -->
+        <referenceBlock name="logo">
+            <arguments>
+                <!--<argument name="logo_file" xsi:type="string">images/m2-logo.png</argument>-->
+                <argument name="logo_img_width" xsi:type="number">283</argument>
+                <argument name="logo_img_height" xsi:type="number">97</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Remove default top links and add custom links to top header -->
+        <referenceBlock name="top.links" remove="">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links contact-info</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="contactus.link" after="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Contacts</argument>
+                    <argument name="path" xsi:type="string" translate="false">contact-us</argument>
+                </arguments>
+            </block>
+    	   <block class="Magento\Framework\View\Element\Html\Link\Current" name="conatct.number" after="contactus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">281-610-8631 </argument>
+                    <!--<argument name="path" xsi:type="string">281-610-8631</argument>-->
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\Link" name="my-account-link" after="conatct.number">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Account</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-link" after="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Cart</argument>
+                    <argument name="path" xsi:type="string">checkout/cart</argument>
+                </arguments>
+            </block>
+        	
+            
+            <block class="Magento\Framework\View\Element\Html\Link" name="contact.link" template="Magento_Theme::header/contact.phtml" after="contactus.link" />
+       	 	<referenceBlock name="authorization-link" remove="true" />
+           	<referenceBlock name="register-link" remove="true" />
+           	<referenceBlock name="wish-list-link" remove="true" />
+        </referenceBlock>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="stash-dash-hedaer-block" before="a.custom.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">stash-dash-hedaer-block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!-- top hide an show menu -->
+        <referenceBlock name="header.panel">
+        	<block class="Magento\Framework\View\Element\Template"
+			name="a.custom.block" template="Magento_Theme::custommenu.phtml"
+			before="top.links" />
+        </referenceBlock>
+
+        <!-- remove unwanted blocks from page -->
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="top.menu" remove="true"/>
+        <referenceBlock name="minicart" remove="true"/>
+
+        <!-- Remove unwanted footer blocks and custom one -->
+        <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <referenceBlock name="block_newsletter" remove="true"/>
+                <referenceBlock name="footer_links" remove="true"/>
+                <referenceBlock name="copyright" remove="true"/>
+                <referenceBlock name="report.bugs" remove="true"/>
+                <block class="Magento\Framework\View\Element\Template"
+                name="a.custom.footer" template="Magento_Theme::footer.phtml"
+                />
+                <referenceBlock name="form.subscribe" remove="true" />
+            </container>
+        </referenceContainer>
+
+        <!-- Top menu and homepage slider -->
+        <referenceContainer name="header.container">
+            <container name="top.container.menu" as="top.container.menu" label="After Page Header Top" htmlTag="div" htmlClass="top-container" after="header-wrapper">
+                    <block class="Magento\Framework\View\Element\Template" name="header.sitemenu" before="-" template="Magento_Theme::menu.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceBlock name="navigation.sections" remove="true" />
+
+        <!-- additional sidebar block for all pages -->
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Cms\Block\Block" name="sidebar_top_1" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">sidebar_top_1</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="sidebar_get_15" after="sidebar_top_1">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">sidebar_get_15</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="wishlist_sidebar" remove="true"/>
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+            
+             <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" after="sidebar_top_1" template="Magento_Newsletter::subscribe.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true" />
+    </body>
+</page>

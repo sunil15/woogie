@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="2columns-left"/>
+    <referenceContainer name="page.wrapper">
+        <container name="header.container" as="header_container" label="Page Header Container" htmlTag="header" htmlClass="page-header" before="main.content">
+        	<container name="top.slider" as="top_slider" label="After Page Top Menu" after="top.container.menu"	 htmlClass="top-container" htmlTag="div">
+        		<block class="Magento\Framework\View\Element\Template" name="header.slider" after="top.container.menu" template="Magento_Theme::slider.phtml" />
+        	</container>
+        </container>
+
+        <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="footer" htmlClass="page-footer"/>
+
+        <container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main" after="main">
+            <container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
+        </container>
+        
+        <container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar sidebar-additional" after="div.sidebar.main">
+            <container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
+        </container>
+        <referenceContainer name="page.bottom.container">
+        		 <block class="Magento\Framework\View\Element\Template" name="content.exclusive" before="-" template="Magento_Theme::exclusive.phtml" />
+        </referenceContainer>
+    </referenceContainer>
+    <referenceBlock name="page.main.title" remove="true" />
+</layout>
