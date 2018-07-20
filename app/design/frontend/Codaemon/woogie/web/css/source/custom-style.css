@@ -64,3 +64,13 @@
 .page-layout-1column .column.main, .page-wrapper .columns, .page-wrapper  .column.main{
 	padding-bottom: 0px;
 }
+.page-products .product-item-info{
+	width: 50% !important;
+}
+.product-img .page-products .product-item-info
+{
+	width: 50% !important;
+}
+.products .zoom-icon{
+	z-index: 8;
+}

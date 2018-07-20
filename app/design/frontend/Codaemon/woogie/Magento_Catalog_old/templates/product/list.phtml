@@ -1,0 +1,76 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ */
+?>
+<?php
+$_productCollection = $block->getLoadedProductCollection();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty"><div><?= /* @escapeNotVerified */ __('We can\'t find products matching the selection.') ?></div></div>
+<?php else: ?>
+    <?= $block->getAdditionalHtml() ?>
+    <?php
+    if ($block->getMode() == 'grid') {
+        $viewMode = 'grid';
+        $image = 'category_page_grid';
+        $showDescription = false;
+        $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    } else {
+        $viewMode = 'list';
+        $image = 'category_page_list';
+        $showDescription = true;
+        $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::FULL_VIEW;
+    }
+    /**
+     * Position for actions regarding image size changing in vde if needed
+     */
+    $pos = $block->getPositioned();
+    ?>
+    <div class="products wrapper <?= /* @escapeNotVerified */ $viewMode ?> products-<?= /* @escapeNotVerified */ $viewMode ?> row products ">
+        <div class="col-md-12 heading">Choose your Woogie Whomper below!</div>
+        <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+        <?php foreach ($_productCollection as $_product): ?>
+            <div class="product-item-info col-md-6 col-sm-6 " data-container="product-grid">
+                <div class="product-img">
+                    <?= $productImage = $block->getImage($_product, $image);?>
+                    
+                    <?= $productImage->toHtml() ?>
+                    <img src="img/product-1.png" class="img-responsive center-block">
+                    <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal1">
+
+                        <img src="img/icon-product-zoom.png" alt="">
+                    </a>
+                </div>
+                <h4 class="title">
+                    <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>"> 
+                        <?php
+                            $_productNameStripped = $block->stripTags($_product->getName(), null, true);
+                        ?>
+                    </a>
+                </h4>
+                <p class="product-info">
+                    Not that bonsai, this is zmall with a zzzzz.
+                    <br>
+                    <?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?> | 8 left | 3 people looking | 4.5 stars
+                    <br>
+                    Buy now / More details
+                </p>
+            </div>
+            
+        <?php endforeach; ?>    
+    </div>
+<?php endif; ?>
