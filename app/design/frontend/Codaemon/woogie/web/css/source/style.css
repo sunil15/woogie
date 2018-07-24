@@ -1073,7 +1073,7 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     right: 2%;
 }
 
-.product-details-right .show-more-text {
+.product-details-right .show-more-text, button {
     font-size: 16px;
     line-height: 22px;
     font-weight: 300;
@@ -1442,11 +1442,11 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     margin: 0 0 25px;
 }
 
-.product-list-tab .product-info {
+.product-list-tab .product-info, .items .product-info {
     padding-left: 0;
 }
 
-.product-list-tab .product-info h2 {
+.product-list-tab .product-info h2, .items .product-info h2 {
     font-size: 20px;
     font-weight: 600;
     color: #0f7cfa;
@@ -1454,7 +1454,7 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     margin: 5px 0 15px;
 }
 
-.product-list-tab .product-info p {
+.product-list-tab .product-info p, .items .product-info p {
     font-size: 16px;
     font-weight: 300;
     color: #4d4d4d;
@@ -1462,14 +1462,14 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     margin: 5px 0 15px;
 }
 
-.product-list-tab .price h4 {
+.product-list-tab .price h4, .items .price h4 {
     font-size: 20px;
     font-weight: 600;
     color: #000000;
     text-align: right;
 }
 
-.product-list-tab .quantity select {
+.product-list-tab .quantity select, .items .quantity select {
     border: 0 none;
     background: transparent;
     width: 60px;
@@ -1485,7 +1485,7 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     color: #000000;
 }
 
-.product-list-tab .quantity .custom-select {
+.product-list-tab .quantity .custom-select, .items .quantity .custom-select {
     background-color: #FFF;
     background-image: url(../../images/icon-select-dropdown.png);
     background-image: url(../../images/icon-select-dropdown.png);
@@ -1499,13 +1499,13 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     float: right;
 }
 
-.product-list-tab > tbody > tr > td {
+.product-list-tab > tbody > tr > td, .items > tbody > tr > td{
     padding: 15px 10px;
     border-top: solid 1px #999999;
 }
 
-.product-list-tab > thead > tr > th, .price-list-tab > thead > tr > th {
-    font-size: 20px;
+.product-list-tab > thead > tr > th, .price-list-tab > thead > tr > th, .items > thead > tr > th{
+    font-size: 20px;>
     font-weight: 600;
     color: #000000;
     margin: 0;
@@ -1513,11 +1513,11 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     border: 0 none;
 }
 
-.product-list-tab, .price-list-tab {
+.product-list-tab, .price-list-tab, .items {
     border: solid 1px #999999;
 }
 
-.product-list-tab .remove {
+.product-list-tab .remove, .items .remove {
     font-size: 14px;
     font-weight: 300;
     color: #3e5e97;
@@ -2198,7 +2198,7 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     height: 52px;
 }
 .foryou-main h1 {
-    font-size: 72px;
+    font-size: 69px;
     color: #fff;
     font-weight: 700;
     text-align: center;
@@ -2532,7 +2532,7 @@ input[type="email"].big-dog:-moz-placeholder { /* Firefox 18- */
     }
     
     .for-dog h2, .for-cat h2, .for-you h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
     
     .for-dog p, .for-cat p, .for-you p {
