@@ -42,6 +42,17 @@
                 </arguments>
             </block>
             <referenceBlock name="toolbar.toolbar-products" remove="true" />
+            <referenceBlock name="filter" remove="true" />
+        </referenceContainer>
+        <!-- <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Framework\View\Element\Template" name="custom.order"
+                before="a.custom.footer" template="Magento_Theme::custom_order.phtml"
+                />
+            </container>
+        </referenceContainer> -->
+        <referenceContainer name="footer">
+            <block name="custom.order" before="a.custom.footer" class="Magento\Framework\View\Element\Template" emplate="Magento_Theme::custom_order.phtml"/>
         </referenceContainer>
         <referenceBlock name="page.main.title">
             <arguments>

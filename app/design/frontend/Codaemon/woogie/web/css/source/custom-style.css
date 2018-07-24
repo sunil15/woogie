@@ -16,9 +16,12 @@
 }
 .page-header .panel.wrapper .panel.header, .page-header .panel.wrapper{
 	margin-bottom: 0px;
+	border-bottom: none;
+	border-top: none;
 }
 .footer.content, .page-header, .panel{
-	border-top: 0px;
+	border-top: none;
+	border-bottom: none;
 }
 
 @media (min-width: 768px){
@@ -33,7 +36,7 @@
 }
 .for-dog p, .for-cat p, .for-you p
 {
-	font-size: 21px;
+	font-size:16px;
 	font-weight: 600px;
 }
 .banner-btm-bg p{
@@ -73,4 +76,201 @@
 }
 .products .zoom-icon{
 	z-index: 8;
+}
+/* Contact us css here */
+.contact {
+	margin: 0;
+	padding-bottom: 60px;
+}
+.contact-banner-main .contact-banner-inner {
+	background: url(../../images/contact_head_bg.png) no-repeat top;
+	padding: 26px 0 40px;
+}
+.contact-banner-main .contact-banner-inner h3 {
+	font-size: 48px;
+	color: #fff;
+	font-weight: 600;
+	line-height: 1;
+	padding: 0 35px;
+	margin: 0;
+}
+.contact a {
+	font-weight: 600;
+}
+.contact .left-paragraph {
+	margin-bottom: 30px;
+}
+.contact .left-paragraph a {
+	margin-bottom: 60px;
+}
+.contact .rightPanel .heading {
+	color: #4d4d4d;
+	font-size: 26px;
+	font-weight: 100;
+}
+.contact .rightPanel p {
+	margin-bottom: 0px;
+}
+.contact .rightPanel p {
+    font-size: 20px;
+    line-height: 26px;
+}
+.contact .rightPanel p a {
+    font-size: 20px;
+    line-height: 26px;
+}
+.catalog-category-view .block.filter
+{
+	display: none;
+}
+.engage-main a {
+	text-decoration: none;
+	color: #fff;
+}
+.modal-inner-wrap .modal-header{
+	border-bottom: none;
+}
+.modal-inner-wrap .modal-content{
+	border-top: none;
+}
+.menu-icon
+{
+	margin-top: 0px;
+}
+.header.links li{
+	line-height: 33px important;
+}
+.minicart-wrapper .action.showcart .counter.qty{
+	background-color: #333;
+}
+.cart-header{
+	margin-bottom: 10px;
+}
+.items .col.subtotal
+{
+    border-right: solid 1px #999999;
+}
+.items .item-actions, .items .cart.item, .cart.table-wrapper .items>.item{
+	border-bottom: solid 1px #999999;
+}
+.product-item-name a:hover{
+	text-decoration: none;
+}
+.table>tbody>tr>td, .items > tbody > tr > td{
+	border-top: none;
+	-webkit-box-sizing: none;
+    -moz-box-sizing: none;
+    box-sizing: none;
+}
+.cart-summary
+{
+	background-color: #fff;
+	border: none !important;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.cart.table-wrapper .col{
+	padding-top: 8px;
+}
+.cart-summary>.title{
+	padding: 10px;
+	margin: 0px;
+	background-color: #f2f2f2;
+	border: 1px solid #999999;
+	font-weight: bold;
+}
+.cart-summary .block{
+	padding: 10px;
+	margin: 0px;
+	border: 1px solid #999999;
+	border-top: 0px;
+	border-collapse: collapse;
+}
+.col.item{
+	padding-top: 15px;
+}
+.cart.table-wrapper .item .col.item,
+.cart.table-wrapper .item .col.price,
+.cart.table-wrapper .item .col.qty,
+.cart.table-wrapper .item .col.subtotal{
+	padding-top: 15px !important;
+}
+.cart-summary .block>.title{
+	border-top: none;
+}
+.cart-summary .cart-totals{
+	padding: 10px;
+	border: 1px solid #999999;
+	border-top: 0px;
+	border-collapse: collapse;
+}
+.cart-summery .cart-totals .table
+{
+	margin-bottom: 0px;
+}
+.cart-totals .mark{
+	background-color: #fff;
+	border-top: 0px;
+}
+.cart-container .checkout-methods-items{
+	padding: 0px 0px;
+}
+.cart-container .cart-summary .checkout.methods.items{
+	border:none !important;
+}
+.label{
+	color: #333333 !important;
+	font-size: 14px;
+}
+input{
+
+}
+.authentication-dropdown, .modal-inner-wrap, .opc-block-shipping-information{
+	background-color: #f2f2f2;
+}
+.opc-sidebar .modal-inner-wrap{
+	background-color: #fff;
+}
+.modal-content{
+	padding: 10px;
+}
+.opc-sidebar .modal-content {
+	padding: 0px;
+}
+.opc-sidebar .opc-block-summary{
+	margin-bottom:0px;
+}
+.fieldset>.field:not(.choice)>.label{
+	border-bottom: 0px;
+}
+.opc-payment .items{
+	border:0px;
+}
+.pc-payment .billing-address-details{
+	font-size: 14px;
+}
+.checkout-success{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.checkout-success .order-number{
+	color: #333;
+}
+.opc-wrapper .shipping-address-item.selected-item{
+	border:2px solid #999999;
+}
+button{
+	 color: #4d4d4d;
+}
+.opc-wrapper .shipping-address-item.selected-item:after{
+	background: #4d4d4d;
+}
+.cart-totals .mark, .opc-block-summary .table-totals .mark{
+	background:none;
+}
+.opc-sidebar .ship-via{
+	margin-bottom: 0px;
+}
+.opc-progress-bar-item._active:before, .opc-progress-bar-item._active>span:before{
+	background: #4d4d4d;
 }

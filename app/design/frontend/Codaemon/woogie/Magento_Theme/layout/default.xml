@@ -49,6 +49,7 @@
         	
             
             <block class="Magento\Framework\View\Element\Html\Link" name="contact.link" template="Magento_Theme::header/contact.phtml" after="contactus.link" />
+            <move element="minicart" destination="top.links" after="conatct.number"/>
        	 	<referenceBlock name="authorization-link" remove="true" />
            	<referenceBlock name="register-link" remove="true" />
            	<referenceBlock name="wish-list-link" remove="true" />
@@ -72,8 +73,7 @@
         <referenceBlock name="advanced-search-link" remove="true"/>
         <referenceBlock name="top.search" remove="true"/>
         <referenceBlock name="top.menu" remove="true"/>
-        <referenceBlock name="minicart" remove="true"/>
-
+        
         <!-- Remove unwanted footer blocks and custom one -->
         <referenceContainer name="footer-container">
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">

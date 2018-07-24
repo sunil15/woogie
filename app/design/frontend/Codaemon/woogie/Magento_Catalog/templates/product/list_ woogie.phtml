@@ -52,8 +52,11 @@ $modal_code = '';
                 <div class="product-img">
                     <?php //echo "<pre>". print_r($_product, true); exit;?>
                     <?php $productImage = $block->getImage($_product, $image); ?>
+                    <?php $productImagePath = $block->getImage($_product, $image)->getImageUrl(); ?>
+                   
                     <?php // Product Image ?>
-                    <?= $productImage->toHtml() ?>
+                    
+                    <img src="<?php echo $productImagePath; ?>" class="img-responsive center-block">
                     <a id="image-modal-<?php echo $_product->getId(); ?>" href="#" class="zoom-icon hidden-xs" type="button" >
                         <img src="<?php echo $this->getViewFileUrl('images/icon-product-zoom.png'); ?>" alt="">
                     </a>
@@ -82,9 +85,9 @@ $modal_code = '';
                     ?>
                   
                     <br>
-                    <?php  /* @escapeNotVerified */ echo "$".round($product_price, 2); ?> | <?php echo $pro_qty; ?> left | 3 people looking | <?php if($ratingSummary) : echo $ratingSummary. "stars"; endif; ?> 
+                    <?php  /* @escapeNotVerified */ echo "$".round($product_price, 2); ?> | <?php echo $pro_qty; ?> left <!-- | 3 people looking --> | <?php if($ratingSummary) : echo $ratingSummary. "stars"; endif; ?> 
                     <br>
-                    <a href="javascript:void()" onclick="add_to_cart_woogie(<?php echo $_product->getId(); ?>);">Buy now </a> / <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>"> More details</a>
+                    <a href="javascript:void(0)" onclick="add_to_cart_woogie(<?php echo $_product->getId(); ?>);">Buy now </a> / <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>"> More details</a>
                 </p>
                  <?php if ($_product->isSaleable()): ?>
                     <?php $postParams = $block->getAddToCartPostParams($_product); ?>
@@ -104,25 +107,14 @@ $modal_code = '';
         <?php endforeach; ?>
     </div>
     <?php foreach ($_productCollection as $_product): ?>
-        <!-- Modal 1 -->
-            <!--<div class="modal fade hidden-xs" id="myModal_<?php echo $_product->getId(); ?>" role="dialog">
-                <div class="modal-dialog">
-                    
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            img src="<?php echo $_product->getImage('image'); ?>" class="img-responsive center-block">
-                            <?= $productImage->toHtml() ?>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="modal-show" style="display: none;" id="modal-show-<?php echo $_product->getId(); ?>">
-                <?= $productImage->toHtml() ?>
-            </div>
-           <?php 
-                $modal_code .= '$("#image-modal-'.$_product->getId().'").click(function() {$("#modal-show-'.$_product->getId().'").modal(options).modal("openModal");});'
-           ?>
+        <div class="modal-show" style="display: none;" id="modal-show-<?php echo $_product->getId(); ?>">
+            <?php $productImagePath = $block->getImage($_product, $image)->getImageUrl(); ?>
+             <img src="<?php echo $productImagePath; ?>" class="img-responsive center-block">
+            
+        </div>
+       <?php 
+            $modal_code .= '$("#image-modal-'.$_product->getId().'").click(function() {$("#modal-show-'.$_product->getId().'").modal(options).modal("openModal");});'
+       ?>
     <?php endforeach; ?>   
 <script type="text/javascript">
     var $ = jQuery.noConflict();
@@ -132,13 +124,9 @@ $modal_code = '';
     }
 </script>
 <?php endif; ?>
-<a id="ship_now">Click for Ship</a>
 
-<div id="shipNowContent" style="display: none;">
-    jbasdask kansodnkoasd knasoda<br/>
-    lkkansdnasda
-</div>
 <script>
+var $ = jQuery.noConflict();
     require(
         [
             'jquery',
@@ -159,7 +147,10 @@ $modal_code = '';
                     click: function () {
                         this.closeModal();
                     }
-                }]
+                }],
+                opened: function($Event) {
+                    $(".modal-footer").hide();
+                }
             };
 
             <?php echo $modal_code; ?>

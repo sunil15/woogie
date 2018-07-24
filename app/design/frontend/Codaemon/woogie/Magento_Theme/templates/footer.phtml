@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <a href="#" class="share-link">Give $15, Get $15. Share.</a>
+                    <a href="<?php echo $this->getUrl('for-you'); ?>" class="share-link">Give $15, Get $15. Share.</a>
                     <div class="guarantee">
                         <h4>Our guarantee</h4>
                         <p>Love it, or let us know and we'll make it right. 100% money back guarantee.</p>
@@ -46,8 +46,8 @@
 </div>
 
 <script type="text/javascript">
-        var $ = jQuery.noConflict();
-        $(window).scroll(function() {
+    var $ = jQuery.noConflict();
+    $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('#toTop').fadeIn();
         } else {
@@ -62,4 +62,4 @@
        //This strange selector seems to work universally
        $("html, body").animate({scrollTop: 0}, 1000);
     });
-    </script>
+</script>
