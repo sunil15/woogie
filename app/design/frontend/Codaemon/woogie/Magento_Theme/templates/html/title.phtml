@@ -17,10 +17,11 @@ if (trim($block->getPageHeading())) {
 }
 ?>
 <?php if ($title): ?>
-    <div class="for-dog-banner">
+
+    <div class="cart-header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-top-heading">
+            <div class="row header-bg">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h1>
                         <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
                         <?php if ($block->getAddBaseAttributeAria()): ?>
@@ -34,16 +35,3 @@ if (trim($block->getPageHeading())) {
         </div>
     </div>
 <?php endif; ?>
-
-<!-- <?php if ($title): ?>
-<div class="page-title-wrapper<?php /* @escapeNotVerified */ echo $cssClass; ?>">
-    <h1 class="page-title"
-        <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
-        <?php if ($block->getAddBaseAttributeAria()): ?>
-            aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"
-        <?php endif; ?>>
-        <?php /* @escapeNotVerified */ echo $title ?>
-    </h1>
-    <?php echo $block->getChildHtml(); ?>
-</div>
-<?php endif; ?> -->

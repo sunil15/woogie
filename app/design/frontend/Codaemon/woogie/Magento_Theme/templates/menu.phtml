@@ -1,51 +1,61 @@
+<?php $currentUrl = $this->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]); ?>
+<?php $currentUrl .= '/';?>
 <div>
-                <a href="<?php echo $this->getUrl('dogs.html'); ?>">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-dog">
-                    <h2>GET ONE</h2>
-                    <p>FOR YOUR DOG</p>
-                </div>
-                </a>
-                <a href="<?php echo $this->getUrl('cats.html'); ?>">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-cat">
-                    <h2>GET ONE</h2>
-                    <p>FOR YOUR CAT</p>
-                </div>
-                </a>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
-                    <div class="sub-nav-mob">
-                        <a href="<?php echo $this->getUrl('for-you'); ?>">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 for-you">
-                            <h2>$15</h2>
-                            <p>FOR YOU</p>
-                        </div>
-                        </a>
-                        <a href="<?php echo $this->getUrl('faq'); ?>">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 faq">
-                            <p>FAQ</p>
-                        </div>
-                        </a>
-                        <a type="button" data-toggle="collapse" data-target="#demo">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 engage">
-                            <p>Engage</p>
-                        </div>
-                        </a>
-                        <a type="button" data-toggle="collapse" data-target="#demo1">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 about">
-                            <p>About</p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xs-12 sub-nav collapse" id="demo">
-                    <div class="link-div"><a href="<?php echo $this->getUrl('engage'); ?>" class="sub-nav-link">Engage</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('group-hug'); ?>" class="sub-nav-link">Group Hug</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('events'); ?>" class="sub-nav-link active">Events</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('vector-sales'); ?>" class="sub-nav-link">Vector Tales</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('newsletter'); ?>" class="sub-nav-link">Newsletter</a></div>
-                </div>   
-                <div class="col-md-12 col-xs-12 sub-nav collapse" id="demo1">
-                    <div class="link-div"><a href="<?php echo $this->getUrl('about-us'); ?>" class="sub-nav-link">About Us</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('create-woogie'); ?>" class="sub-nav-link active">Creating the Woogie Whomper</a></div>
-                    <div class="link-div"><a href="<?php echo $this->getUrl('testimonials'); ?>" class="sub-nav-link">Testimonials</a></div>
-                     <div class="link-div"><a href="<?php echo $this->getUrl('retail-partners'); ?>" class="sub-nav-link">Retail Partners</a></div>
+    <a href="<?php echo $this->getUrl('dogs.html'); ?>">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-dog">
+        <?php if($currentUrl == ($this->getUrl('dogs.html'))) : ?>
+            <img src="<?php echo $this->getViewFileUrl('images/for-dog-nav-bdr.png'); ?>" class="img-responsive active">
+        <?php endif; ?>
+        <h2>GET ONE</h2>
+        <p>FOR YOUR DOG</p>
+    </div>
+    </a>
+    <a href="<?php echo $this->getUrl('cats.html'); ?>">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-cat">
+        <?php if($currentUrl == ($this->getUrl('cats.html'))) : ?>
+            <img src="<?php echo $this->getViewFileUrl('images/for-dog-nav-bdr.png'); ?>" class="img-responsive active">
+        <?php endif; ?>
+        <h2>GET ONE</h2>
+        <p>FOR YOUR CAT</p>
+    </div>
+    </a>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+        <div class="sub-nav-mob">
+            <a href="<?php echo $this->getUrl('15-for-you'); ?>">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 for-you">
+                <h2>$15</h2>
+                <p>FOR YOU</p>
             </div>
+            </a>
+            <a href="<?php echo $this->getUrl('faq'); ?>">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 faq <?php if($currentUrl == ($this->getUrl('faq'))) : ?> active <?php endif; ?>">
+                <p>FAQ</p>
+            </div>
+            </a>
+            <a type="button" data-toggle="collapse" data-target="#demo">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 engage <?php if($currentUrl == ($this->getUrl('engage'))) : ?> active <?php endif; ?>">
+                <p>Engage<span class="caret"></span></p>
+                <?php if($currentUrl == ($this->getUrl('engage'))) : ?> <img src="<?php echo $this->getViewFileUrl('images/nav-down-arrow.png'); ?>" class="down-arrow"> <?php endif; ?>
+                
+            </div>
+            </a>
+            <a type="button" data-toggle="collapse" data-target="#demo1">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 about <?php if($currentUrl == ($this->getUrl('about-us'))) : ?> active <?php endif; ?>">
+                <p>About<span class="caret"></span></p>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-12 col-xs-12 sub-nav collapse" id="demo">
+        <div class="link-div"><a href="<?php echo $this->getUrl('engage'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('engage'))) : ?> active <?php endif; ?>">Engage</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('group-hug'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('group-hug'))) : ?> active <?php endif; ?>">Group Hug</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('events'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('events'))) : ?> active <?php endif; ?>">Events</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('vector-sales'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('vector-sales'))) : ?> active <?php endif; ?>">Vector Tales</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('newsletter'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('newsletter'))) : ?> active <?php endif; ?>">Newsletter</a></div>
+    </div>   
+    <div class="col-md-12 col-xs-12 sub-nav collapse" id="demo1">
+        <div class="link-div"><a href="<?php echo $this->getUrl('about-us'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('about-us'))) : ?> active <?php endif; ?>" >About Us</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('create-woogie'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('create-woogie'))) : ?> active <?php endif; ?>">Creating the Woogie Whomper</a></div>
+        <div class="link-div"><a href="<?php echo $this->getUrl('testimonials'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('testimonials'))) : ?> active <?php endif; ?>">Testimonials</a></div>
+         <div class="link-div"><a href="<?php echo $this->getUrl('retail-partners'); ?>" class="sub-nav-link <?php if($currentUrl == ($this->getUrl('retail-partners'))) : ?> active <?php endif; ?>">Retail Partners</a></div>
+</div>
