@@ -59,6 +59,6 @@
                 <container name="minicart.addons" label="Mini-cart promotion block"/>
             </block>
         </referenceContainer>
-         <referenceBlock name="page.main.title" remove="false" />
+         <referenceBlock name="page.main.title" remove="true" />
     </body>
 </page>

@@ -218,9 +218,10 @@
 .cart-container .cart-summary .checkout.methods.items{
 	border:none !important;
 }
-.label{
-	color: #333333 !important;
-	font-size: 14px;
+.label, action.action-auth-toggle, .step-title{
+	color: #333333;
+	font-size: 20px;
+	font-weight: normal;
 }
 input{
 
@@ -256,6 +257,12 @@ input{
 .checkout-success .order-number{
 	color: #333;
 }
+.opc-wrapper .shipping-address-item,
+.billing-address-details,
+p
+{
+	font-size: 20px;
+}
 .opc-wrapper .shipping-address-item.selected-item{
 	border:2px solid #999999;
 }
@@ -273,4 +280,50 @@ button{
 }
 .opc-progress-bar-item._active:before, .opc-progress-bar-item._active>span:before{
 	background: #4d4d4d;
+}
+.login-container{
+	padding-top: 20px;
+}
+.block-customer-login-heading{
+	font-size: 20px;
+}
+button.action,
+.form-cart .action.clear,
+.form-cart .action.update,
+.action.primary.checkout{
+	font-size: 1rem;
+    border-radius: 0px;
+    margin: 0px;
+}
+button.action span,
+.form-cart .action.clear span, 
+.form-cart .action.update span
+{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+}
+.form-cart .action.clear {
+	background-color: #d9534f;
+    border-color: #ac2925;
+}
+button.action,
+.form-cart .action.update{
+	background-color: #1979c3;
+    border-color: #006bb4;
+}
+button.action,
+.form-cart .action.update:hover{
+	background-color: #006bb4;
+}
+.form-cart .action.clear:hover{
+	background-color: #c9302c;
+	text-decoration: none;
+}
+.step-title{
+	font-size: 24px;
+	color: #3e5e97;
+}
+.table-checkout-shipping-method .col{
+	font-size: 18px;
 }
