@@ -1,0 +1,45 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\Catalog\Block\Product\AbstractProduct */ ?>
+<button type="button" class="btn btn-write-review">write a review</button>
+<a href="#" class="question-text" data-toggle="modal" data-target="#reviewGuideline">
+    <img src="<?= $this->getViewFileUrl('images/icon-question-small.png'); ?>"> Review guidelines
+</a>
+<?php echo $block->getReviewRenderer($block->getProduct(), false, true)?>
+
+
+<!-- Modal Review Guideline -->
+<div class="modal fade" id="reviewGuideline" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <a type="button" data-dismiss="modal" class="close-btn">
+                	<img src="<?= $this->getViewFileUrl('images/icon-modal-close.png'); ?>">
+                </a>
+                <p>
+                    Reviews help us make Woogie Whompers better, so first of all thanks for sharing yours!  When writing your review please use English and make sure the review is relevant to this product.
+                    <br><br>
+                    We reserve the right to remove your review if contains any of the following types of content or violates other internal guidelines:
+                    <br>
+                </p>
+                <ul>
+                    <li>Full name, email addresses, URLs, phone numbers, physical addresses or other forms of contact information</li>
+                    <li>Obscenities, discriminatory language, or other language not suitable for a public forum</li>
+                    <li>Advertisements, "spam" content, or references to other products, offers, websites, or promotional details or services</li>
+                    <li>Critical or spiteful comments</li>
+                </ul>
+                <p>
+                    In addition, if you wish to share feedback with us about product selection, pricing, ordering, delivery or other customer service issues, please contact us at 281-610-8631 or feedback@woogiewhomper.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
