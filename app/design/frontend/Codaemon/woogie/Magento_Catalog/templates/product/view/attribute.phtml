@@ -57,10 +57,12 @@ if ($_attributeType && $_attributeType == 'text') {
 <?php } ?>
 
 <?php if (!empty($button)) { ?>
-    <div class="product-details-right">
-        <button type="button" class="btn btn-show-more show-more">Show more...</button>
-        <button type="button" class="btn btn-show-more show-less">Show Less...</button>
-    </div>
+    <?php if ($_attributeValue): ?>
+        <div class="product-details-right">
+            <button type="button" class="btn btn-show-more show-more">Show more...</button>
+            <button type="button" class="btn btn-show-more show-less">Show Less...</button>
+        </div>
+    <?php endif; ?>
 <?php } ?>
 
 <script type="text/javascript">

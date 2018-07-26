@@ -151,13 +151,110 @@
 .product-details-right .free-gift {
     margin-bottom: 30px;
 }
+.product-list-tab, .price-list-tab, .items {
+    border: none;
+}
+
+/*Login/Registration Css*/
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+	height: 34px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.fieldset>.field>.label, .fieldset>.fields>.field>.label {
+	font-weight: 300;
+}
+.actions-toolbar .secondary a.action {
+    margin: 8px 0;
+}
+.actions-toolbar .secondary {
+    float: none;
+}
+.actions-toolbar {
+	margin-bottom: 20px;
+}
+.back {
+	padding: 7px 15px;
+	border-radius: 0px;
+}
+.back.btn span {
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+button, a.action.primary, .cart.table-wrapper .actions-toolbar>.action, .cart.table-wrapper .action-gift {
+	border-radius: 0px;
+}
+button {
+	border-radius: 0px !important;
+}
 p, li {
-	font-size: 16px;
+	font-size: 20px;
     line-height: 22px;
     font-weight: 300;
     text-align: left;
 }
 
+/*Shopping Cart CSS*/
+#shopping-cart-table {
+	border: 1px solid #999999;
+}
+
+/*label css*/
+.label-blue {
+	color: #3e5e97;
+}
+
+/*Font Weight Css*/
+.font-small {
+    font-weight: 300;
+}
+
+/*User Account CSS*/
+.columns {
+	margin-top: 20px;
+}
+.account-nav .content {
+	border: 1px solid #999;
+    padding: 0;
+    background: #fff;
+}
+.account-nav .nav.items li a {
+	font-weight: 600;
+}
+.account-nav .nav.items li:first-child {
+	border-bottom: 1px solid #999;
+	background: #f2f2f2;
+}
+.account-nav .nav.items li:first-child a {
+	font-size: 18px;
+	color: #000;
+	font-weight: 700;
+	background: #f2f2f2;
+}
+.box .box-title span {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+}
+.display-inline {
+	display: inline;
+}
+address {
+	font-size: 20px;
+}
+.action.save.primary {
+	padding: 6px 17px !important;
+}
+.nav.item.current a {
+	color: #333;
+}
+.message.info.empty {
+	font-size: 20px;
+	background: #fff; 
+    color: #333;
+}
+.message.info>*:first-child:before {
+	content: '';
+}
 
 @media (min-width: 768px){
 	.page-wrapper>.page-bottom
@@ -173,6 +270,7 @@ p, li {
 {
 	font-size:16px;
 	font-weight: 600px;
+	text-align: center;
 }
 .banner-btm-bg p{
 	font-size: 27px;
@@ -355,11 +453,8 @@ p, li {
 }
 .label, action.action-auth-toggle, .step-title{
 	color: #333333;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: normal;
-}
-input{
-
 }
 .authentication-dropdown, .modal-inner-wrap, .opc-block-shipping-information{
 	background-color: #f2f2f2;
@@ -394,10 +489,10 @@ input{
 }
 .opc-wrapper .shipping-address-item,
 .billing-address-details,
-p
+/*p
 {
 	font-size: 20px;
-}
+}*/
 .opc-wrapper .shipping-address-item.selected-item{
 	border:2px solid #999999;
 }
@@ -416,8 +511,14 @@ button{
 .opc-progress-bar-item._active:before, .opc-progress-bar-item._active>span:before{
 	background: #4d4d4d;
 }
-.login-container{
+.login-container, .signup-container {
 	padding-top: 20px;
+}
+.account-container .block-title, .signup-container .block-title {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
 }
 .block-customer-login-heading{
 	font-size: 20px;
@@ -435,7 +536,9 @@ button.action span,
 .form-cart .action.update span
 {
 	color: #fff;
-	font-size: 20px;
+	/*font-size: 20px;
+	font-weight: 400;*/
+	font-size: 1.4rem;
 	font-weight: 600;
 }
 .form-cart .action.clear {
