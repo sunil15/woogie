@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Theme\Block\Html\Title
+ */
+$cssClass = $block->getCssClass() ? ' ' . $block->getCssClass() : '';
+$title = '';
+$accoutHead = $block->getAccountId();
+if (trim($block->getPageHeading())) {
+    $title = '<span class="base" data-ui-id="page-title-wrapper" ' .  $block->getAddBaseAttribute() . '>'
+        . $block->escapeHtml($block->getPageHeading()) . '</span>';
+}
+?>
+<?php if(empty($accoutHead)) { ?>
+    <?php if ($title): ?>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-top-heading">
+            <h1>
+                <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
+                <?php if ($block->getAddBaseAttributeAria()): ?>
+                    aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"
+                <?php endif; ?>
+                <?php /* @escapeNotVerified */ echo $title ?>
+            </h1>
+            <?php echo $block->getChildHtml(); ?>
+        </div>
+    <?php endif; ?>
+<?php } ?>
+
+
+<?php if(!empty($accoutHead)) { ?>
+<div class="container" id="about-banner">
+    <div class="row">
+        <div class="banner-btm-bg">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-banner-inner">
+                <p>
+                    <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
+                    <?php if ($block->getAddBaseAttributeAria()): ?>
+                        aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"
+                    <?php endif; ?>
+                    <?php /* @escapeNotVerified */ echo $title ?>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>

@@ -256,6 +256,57 @@ address {
 	content: '';
 }
 
+/*Blog Css*/
+.post-holder {
+    background: #FFF;
+}
+.post-holder:hover {
+    box-shadow: none;
+}
+.post-view .post-nextprev-hld .prev-link, .post-view .post-nextprev-hld .next-link {
+	float: none;
+	text-align: center;
+}
+.nextprev-link {
+	font-size: 18px;
+	font-weight: 600;
+	padding: 0 10px;
+	text-transform: uppercase;
+}
+.pages strong.page {
+	font-size: 20px;
+}
+.pages a.page {
+	font-size: 20px;
+}
+.pages .items {
+	display: inherit;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.post-list .post-header .post-title a {
+	font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+#engageNewsletter .banner-btm-bg {
+    background: url(../../images/contact_head_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 35px 15px 35px;
+    height: 113px;
+}
+
+#engageNewsletter .banner-btm-bg p {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    color: #FFF;
+    text-align: left;
+}
+
+
 @media (min-width: 768px){
 	.page-wrapper>.page-bottom
 	{
