@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="csstransforms csstransforms3d csstransitions">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <link rel="shortcut icon" href="" type="image/x-icon">
+      <title>Woogie Whomper</title>
+
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    
+      <!-- Custom CSS -->
+      <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="http://www.codaemonsoftwares.com/web-application-and-portal.html">Dog</a>
+    <a href="http://www.codaemonsoftwares.com/mobile-application.html">Cat</a>
+    <a href="http://www.codaemonsoftwares.com/e-commerce.html">For You</a>
+    <a href="http://www.codaemonsoftwares.com/seo-and-sem.html">About Us</a>
+    <a href="http://www.codaemonsoftwares.com/social-media-and-analytics.html">FAQ</a>
+    <a href="http://www.codaemonsoftwares.com/big-data-and-data-analytics.html">Contact</a>
+    <a href="http://www.codaemonsoftwares.com/cloud-computing.html">Engage</a>
+</div>
+  
+<body>
+    <!-- Header starts here -->
+    <header class="header-main clearfix">
+        <div class="container">
+            <div class="row top-nav">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2">
+                    <span class="open-sidenav" onclick="openNav()">
+                        <img src="img/icon-menu.svg" class="img-responsive menu-icon">
+                    </span>
+                </div>
+                <div class="col-xs-4 visible-xs no-padding">
+                    <a href="index.html"><img src="img/logo.svg" class="img-responsive logo"></a>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6 contact-info no-pad-left">
+                    <ul>
+                        <li>
+                            <a href="#" class="hidden-xs">CONTACT</a>
+                            <a href="#" class="hidden-sm hidden-md hidden-lg"><img src="img/icon-email.png"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="hidden-xs">281-610-8631 </a>
+                            <a href="#" class="hidden-sm hidden-md hidden-lg"><img src="img/icon-phone.png"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="hidden-xs">ACCOUNT</a>
+                            <a href="#" class="hidden-sm hidden-md hidden-lg"><img src="img/icon-account.png"></a>
+                        </li>
+                        <li>
+                            <a href="#">CART <span class="color-red">1</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row header">
+                <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 hidden-xs">
+                    <a href="index.html"><img src="img/logo.svg" class="img-responsive logo"></a>
+                </div>
+                <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-7 col-sm-offset-0">
+                    <p class="header-heading">Stash and dash. Store and snore.</p>
+                </div>
+            </div>
+            <div class="row">
+                <a href="product_for_dog.html">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-dog">
+                    <img src="img/for-dog-nav-bdr.png" class="img-responsive active">
+                    <h2>GET ONE</h2>
+                    <p>FOR YOUR DOG</p>
+                </div>
+                </a>
+                <a href="product_for_cat.html">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 for-cat">
+                    <h2>GET ONE</h2>
+                    <p>FOR YOUR CAT</p>
+                </div>
+                </a>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="sub-nav-mob">
+                        <a href="$15_for_you.html">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 for-you">
+                            <h2>$15</h2>
+                            <p>FOR YOU</p>
+                        </div>
+                        </a>
+                        <a href="faq.html">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 faq">
+                            <p>FAQ</p>
+                        </div>
+                        </a>
+                        <a href="engage_main.html">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 engage">
+                            <p>Engage</p>
+                        </div>
+                        </a>
+                        <a href="about_us.html">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 about">
+                            <p>About</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header ends here -->
+    
+    <div class="for-dog-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-top-heading">
+                    <h1>Woogie Whompers for Dogs</h1>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/banner-for-dog.png" alt="" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner-for-dog.png" alt="" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner-for-dog.png" alt="" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner-for-dog.png" alt="" style="width:100%;">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner-for-dog.png" alt="" style="width:100%;">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>-->
+                    </div>
+                    
+                    <div class="banner-btm-bg">
+                        <div id="myCarousel" class="carousel slide " data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 five-things">
+                    <h2 class="heading">Woogie Whompers are at least five things</h2>
+                    <div class="icon-div">
+                        <img src="img/icon-five-things.png" class="img-responsive center-block">
+                        <p class="icon-name">Toy Game</p>
+                    </div>
+                    <div class="icon-div">
+                        <img src="img/icon-five-things.png" class="img-responsive center-block">
+                        <p class="icon-name">Toy Storage</p>
+                    </div>
+                    <div class="icon-div">
+                        <img src="img/icon-five-things.png" class="img-responsive center-block">
+                        <p class="icon-name">A Great Bed</p>
+                    </div>
+                    <div class="icon-div">
+                        <img src="img/icon-five-things.png" class="img-responsive center-block">
+                        <p class="icon-name">All Day Hug</p>
+                    </div>
+                    <div class="icon-div">
+                        <img src="img/icon-five-things.png" class="img-responsive center-block">
+                        <p class="icon-name">Travel Carry-All</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- start left column -->
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="leftPanel">
+                    <p class="left-paragraph">
+                        Since we're pretty flowery on front, this would be a more descriptive "why we make them like we do" sort of description &amp; sell. 
+                        <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        <br><br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <!-- end left column -->
+                
+                <!-- start right column -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs all-woogie-list" id="rightPanel">
+                    <h4 class="heading">All Woogie Whompers</h4>
+                    
+                    <ul>
+                        <li>Are beds for small and medium-sized dogs and cats.</li>
+                        <li>Are storage for your pup’s small stued toys (we call them woogies and we go through a LOT of ‘em).</li>
+                        <li>Are an everyday activity - pulling out toys is so much fun!</li>
+                        <li>Are something to throw your pup’s stu into for travelling. We put their bowls, a small bag of food, some treats, and their woogies within the donut hole space in the bottom. Just zip it up and go!</li>
+                        <li>32” diameter and 4” thick.</li>
+                        <li>Use luxury furniture grade upholstery material for the top, in limited runs of usually 50 Woogie Whompers or less, so if you see a pattern you really love, grab it now.</li>
+                        <li>Top and bottom are both machine washable, see <a href="#">washing instructions</a>.</li>
+                        <li>Luxury furniture grade 1” foam top and a luxury furniture grade 4” thick foam donut in the bottom.</li>
+                    </ul>
+                    
+                </div>
+                <!-- end right column -->
+            </div>
+            <div class="row products">
+                <div class="col-md-12 heading">Choose your Woogie Whomper below!</div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-1.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal1">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-2.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal2">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-3.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal3">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-4.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal4">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-5.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal5">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="product-img">
+                        <img src="img/product-6.png" class="img-responsive center-block">
+                        <a href="#" class="zoom-icon hidden-xs" type="button" data-toggle="modal" data-target="#myModal6">
+                            <img src="img/icon-product-zoom.png" alt="">
+                        </a>
+                    </div>
+                    <h4 class="title">The Bonzai</h4>
+                    <p class="product-info">
+                        Not that bonsai, this is zmall with a zzzzz.
+                        <br>
+                        $125 | 8 left | 3 people looking | 4.5 stars
+                        <br>
+                        Buy now / More details
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Modal 1 -->
+            <div class="modal fade hidden-xs" id="myModal1" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 2 -->
+            <div class="modal fade hidden-xs" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 3 -->
+            <div class="modal fade hidden-xs" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 4 -->
+            <div class="modal fade hidden-xs" id="myModal4" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 5 -->
+            <div class="modal fade hidden-xs" id="myModal5" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 6 -->
+            <div class="modal fade hidden-xs" id="myModal6" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="img/product-popup.png" class="img-responsive center-block">
+                            <a type="button" data-dismiss="modal" class="close-btn">
+                                <img src="img/icon-popup-close.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row custom-order">
+                <div class="col-md-8 col-xs-7">
+                    <h2>Custom order</h2>
+                    <p>Have a fabric you would like us to use? Have a custom Woogie Whomper made!</p>
+                </div>
+                <div class="col-md-4 col-xs-5">
+                    <a href="mailto:kathy@woogiewhomper.com?Subject=Woogie%Whomper%-%custom%orders" class="send-email">
+                        <span>Email</span> 
+                        <img src="img/icon-email-white.png" alt=""> 
+                        <img src="img/right-large-arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    
+    <footer>
+        <div class="container" id="footer">
+            <div class="row top-footer">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="toTop">
+                    <p>Top of page</p>    
+                </div>
+            </div>
+            <div class="row main-footer">
+                <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-1 col-sm-offset-1 col-xs-12">
+                    <span class="open-sidenav" onclick="openNav()">
+                        <img src="img/footer-nav-icon.png" class="img-responsive menu-icon hidden-xs">
+                    </span>
+                    <div class="social-icons-mob hidden-sm hidden-md hidden-lg">
+                        <span class="open-sidenav" onclick="openNav()">
+                            <img src="img/footer-nav-icon.png" class="img-responsive">
+                        </span>
+                        <a href="#"><img src="img/footer-facebook.png" class="img-responsive"></a>
+                        <a href="#"><img src="img/footer-insta.png" class="img-responsive"></a>
+                        <a href="#"><img src="img/footer-youtube.png" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-md-offset-1 col-xs-12">
+                    <div class="social-icons hidden-xs">
+                        <a href="#"><img src="img/footer-facebook.png" class="img-responsive"></a>
+                        <a href="#"><img src="img/footer-insta.png" class="img-responsive"></a>
+                        <a href="#"><img src="img/footer-youtube.png" class="img-responsive"></a>
+                    </div>
+                    <div class="customer-care">
+                        <h4 class="heading">Customer care</h4>
+                        <a href="#">My account</a>
+                        <a href="#">Track my order</a>
+                        <a href="#">Returns &amp; exchanges</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <a href="#" class="share-link">Give $15, Get $15. Share.</a>
+                    <div class="guarantee">
+                        <h4>Our guarantee</h4>
+                        <p>Love it, or let us know and we'll make it right. 100% money back guarantee.</p>
+                    </div>
+                    <a href="mailto:kathy@woogiewhomper.com?Subject=Woogie%Whomper%distributor%opportunities" target="_top" class="send-email-link">Become a distributor</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+        $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $("#toTop").click(function () {
+       //1 second of animation time
+       //html works for FFX but not Chrome
+       //body works for Chrome but not FFX
+       //This strange selector seems to work universally
+       $("html, body").animate({scrollTop: 0}, 1000);
+    });
+    </script>
+    
+    <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    
+	
+  </body>
+</html>
