@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6675f7e000afd72004f13433adc58e9",
+    "content-hash": "3accb9d0bbacb03e87b5ac9fd3c15fd3",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -6906,6 +6906,78 @@
             "description": "An extendable framework for version control hooks.",
             "abandoned": "phpro/grumphp",
             "time": "2014-09-22T08:40:36+00:00"
+        },
+        {
+            "name": "swissup/core",
+            "version": "1.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/swissup/core/swissup-core-1.6.1.0.zip",
+                "reference": null,
+                "shasum": "42ba556f818b506116a4512d966bc601170efda0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Core\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Swissup core module. It's purpose is to add menu and config placeholders",
+            "keywords": [
+                "core",
+                "installer",
+                "module manager",
+                "notifier",
+                "popup messenger",
+                "swissup services"
+            ]
+        },
+        {
+            "name": "swissup/testimonials",
+            "version": "1.0.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/swissup/testimonials/swissup-testimonials-1.0.5.0.zip",
+                "reference": null,
+                "shasum": "049c080619801d834e6eedc9933d16a726484cc3"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0",
+                "swissup/core": "*"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "store": "https://swissuplabs.com/testimonials-for-magento-2.html",
+                        "download": "https://swissuplabs.com/subscription/customer/products/",
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/testimonials/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/testimonials/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Testimonials\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Testimonials extension from Swissup",
+            "keywords": [
+                "reviews",
+                "testimonials"
+            ]
         },
         {
             "name": "symfony/console",
