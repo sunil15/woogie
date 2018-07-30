@@ -108,15 +108,16 @@
                     </block>
                 </block>
 
-                <container name="product.info.extrahint" as="extrahint" label="Product View Extra Hint">
-                    <container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links" after="product.info.overview" >
+                <!-- <container name="product.info.extrahint" as="extrahint" label="Product View Extra Hint" remove="true">
+                    <container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links" after="product.info.overview">
                         <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="product/view/addto.phtml">
                             <block class="Magento\Catalog\Block\Product\View\AddTo\Compare" name="view.addto.compare" as="product_details" after="view.addto.wishlist" template="Magento_Catalog::product/view/addto/compare.phtml" />
                         </block>
 
-                        <block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" template="product/view/mailto.phtml"/>
                     </container>
                 </container>
+ -->
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" template="product/view/mailto.phtml" before="product.info.media" />
 
                 <block class="Magento\Cms\Block\Block" name="block_identifier" before="product.info.media"> 
                     <arguments> 
@@ -191,7 +192,7 @@
         <referenceBlock name="product.info.addtocart.additional">
             <block class="Magento\Catalog\Block\ShortcutButtons\InCatalog" name="addtocart.shortcut.buttons.additional"/>
         </referenceBlock>
-	<referenceBlock name="page.main.title" remove="false" />
+    <referenceBlock name="page.main.title" remove="false" />
     <!-- <referenceBlock name="product.info.addto" remove="true"/> -->
     </body>
 </page>

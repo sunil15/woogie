@@ -66,6 +66,12 @@
     margin-left: 8px;
     height: 40px;
 }
+.review-title {
+	font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 .product-info-main .box-tocart .actions, .product-options-bottom .box-tocart .actions {
 	padding-top: 0px;
 }
@@ -247,12 +253,12 @@ address {
 .nav.item.current a {
 	color: #333;
 }
-.message.info.empty {
+.message.info.empty, .message.error, .message.warning, .message.notice, .message.success {
 	font-size: 20px;
 	background: #fff; 
     color: #333;
 }
-.message.info>*:first-child:before {
+.message.info>*:first-child:before, .message.error > *:first-child:before, .message.warning > *:first-child:before, .message.notice > *:first-child:before, .message.success > *:first-child:before {
 	content: '';
 }
 
@@ -562,6 +568,7 @@ button{
 .opc-progress-bar-item._active:before, .opc-progress-bar-item._active>span:before{
 	background: #4d4d4d;
 }
+
 .login-container, .signup-container {
 	padding-top: 20px;
 }
