@@ -26,6 +26,10 @@
         <div class="toolbar review-toolbar">
             <?php echo $block->getChildHtml('toolbar') ?>
         </div>
+        <a href="#review-form" type="button" class="btn btn-write-review">write a review</a>
+        <a href="#" class="question-text" data-toggle="modal" data-target="#reviewGuideline">
+            <img src="<?= $this->getViewFileUrl('images/icon-question-small.png'); ?>"> Review guidelines
+        </a>
         <div class="items review-items">
         <?php foreach ($_items as $_review):?>
             <div class="item review-item" itemscope itemprop="review" itemtype="http://schema.org/Review">
@@ -34,7 +38,7 @@
                     <div class="review-ratings">
                     <?php foreach ($_review->getRatingVotes() as $_vote): ?>
                     <div class="rating-summary item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                        <span class="label rating-label"><span><?php echo $block->escapeHtml($_vote->getRatingCode()) ?></span></span>
+                        <!-- <span class="label rating-label"><span><?php echo $block->escapeHtml($_vote->getRatingCode()) ?></span></span> -->
                         <div class="rating-result" title="<?php /* @escapeNotVerified */ echo $_vote->getPercent() ?>%">
 	                        <meta itemprop="worstRating" content = "1"/>
 	                        <meta itemprop="bestRating" content = "100"/>
@@ -51,13 +55,13 @@
                 </div>
                 <div class="review-details">
                     <p class="review-author">
-                        <span class="review-details-label"><?php /* @escapeNotVerified */ echo __('Review by')?></span>
-                        <strong class="review-details-value" itemprop="author"><?php echo $block->escapeHtml($_review->getNickname()) ?></strong>
+                        <!-- <span class="review-details-label"><?php /* @escapeNotVerified */ echo __('Review by')?></span> -->
+                        <strong class="review-details-value reviewer-name" itemprop="author"><?php echo $block->escapeHtml($_review->getNickname()) ?></strong>
                     </p>
-                    <p class="review-date">
+                   <!--  <p class="review-date">
                         <span class="review-details-label"><?php /* @escapeNotVerified */ echo __('Posted on') ?></span>
                         <time class="review-details-value" itemprop="datePublished" datetime="<?php /* @escapeNotVerified */ echo $block->formatDate($_review->getCreatedAt(), $format) ?>"><?php /* @escapeNotVerified */ echo $block->formatDate($_review->getCreatedAt(), $format) ?></time>
-                    </p>
+                    </p> -->
                 </div>
             </div>
         <?php endforeach; ?>
@@ -68,3 +72,33 @@
     </div>
 </div>
 <?php endif;?>
+
+
+<!-- Modal Review Guideline -->
+<div class="modal fade" id="reviewGuideline" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <a type="button" data-dismiss="modal" class="close-btn">
+                    <img src="<?= $this->getViewFileUrl('images/icon-modal-close.png'); ?>">
+                </a>
+                <p>
+                    Reviews help us make Woogie Whompers better, so first of all thanks for sharing yours!  When writing your review please use English and make sure the review is relevant to this product.
+                    <br><br>
+                    We reserve the right to remove your review if contains any of the following types of content or violates other internal guidelines:
+                    <br>
+                </p>
+                <ul>
+                    <li>Full name, email addresses, URLs, phone numbers, physical addresses or other forms of contact information</li>
+                    <li>Obscenities, discriminatory language, or other language not suitable for a public forum</li>
+                    <li>Advertisements, "spam" content, or references to other products, offers, websites, or promotional details or services</li>
+                    <li>Critical or spiteful comments</li>
+                </ul>
+                <p>
+                    In addition, if you wish to share feedback with us about product selection, pricing, ordering, delivery or other customer service issues, please contact us at 281-610-8631 or feedback@woogiewhomper.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

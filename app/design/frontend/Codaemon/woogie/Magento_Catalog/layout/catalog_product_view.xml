@@ -95,7 +95,7 @@
                     </block>
                 </block>
 
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.custom.details" template="product/view/details.phtml" before="product.info.extrahint">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.custom.details" template="product/view/details.phtml" after="product.info">
                     <block class="Magento\Catalog\Block\Product\View" name="product.info.description" template="product/view/attribute.phtml" group="detailed_info">
                         <arguments>
                             <argument name="at_call" xsi:type="string">getDescription</argument>
@@ -139,11 +139,11 @@
                         <argument name="title" translate="true" xsi:type="string">Reviews</argument>
                     </arguments>
                 </block> -->
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.custom.review" template="product/view/reviews.phtml" group="detailed_info">
+                <!-- <block class="Magento\Catalog\Block\Product\View" name="product.info.custom.review" template="product/view/reviews.phtml" group="detailed_info">
                     <arguments>
                         <argument translate="true" name="title" xsi:type="string">Reviews</argument>
                     </arguments>
-                </block>
+                </block> -->
                 <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.attributes" as="additional" template="product/view/attributes.phtml" group="detailed_info">
                     <arguments>
                         <argument translate="true" name="title" xsi:type="string">Have a question? Ask and answer.</argument>

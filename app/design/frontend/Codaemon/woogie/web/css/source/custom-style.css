@@ -160,6 +160,28 @@
 .product-list-tab, .price-list-tab, .items {
     border: none;
 }
+.review-ratings ~ .review-content, .review-ratings ~ .review-details {
+	margin-left: 0;
+}
+.review-ratings {
+	width: 100%;
+	max-width: none;
+}
+.reviewer-name {
+	font-size: 12px;
+    line-height: 17px;
+    font-weight: 600;
+    color: #808080;
+}
+.review-content {
+	margin-bottom: 0;
+}
+.btn-write-review {
+	color: #fff !important;
+}
+.short p, .full p {
+	font-size: 16px;
+}
 
 /*Login/Registration Css*/
 input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
@@ -193,7 +215,7 @@ button, a.action.primary, .cart.table-wrapper .actions-toolbar>.action, .cart.ta
 button {
 	border-radius: 0px !important;
 }
-p, li {
+p {
 	font-size: 20px;
     line-height: 22px;
     font-weight: 300;
@@ -311,6 +333,47 @@ address {
     color: #FFF;
     text-align: left;
 }
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+/* Testimoial CSS */
+.testimonials-list .testimonials {
+	margin: 5rem 10rem;
+}
+.testimonial-listing {
+	padding-top: 30px;
+  	border-top: 2px solid #3e5e97;
+}
+.testimonial-listing .testimonial {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.testimonials-list .testimonial .message:before {
+	border-style: none;
+}
+.testimonials-list .testimonial .message {
+	border: none;
+  	border-bottom: none;
+}
+.testimonials-list .testimonial .author-info {
+	font-style: initial;
+	display: block;
+}
+.testimonials-list .testimonial .message {
+	font-style: initial;
+	font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.testimonials-list .testimonial {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.testimonials-list .testimonial .author-info {
+	font-weight: 600;
+}
+
 
 
 @media (min-width: 768px){

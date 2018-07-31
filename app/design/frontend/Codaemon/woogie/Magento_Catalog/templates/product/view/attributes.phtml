@@ -14,11 +14,15 @@
 ?>
 <?php
     $_helper = $this->helper('Magento\Catalog\Helper\Output');
-    $_product = $block->getProduct()
+    $_product = $block->getProduct();
 ?>
 <?php if ($_additional = $block->getAdditionalData()): ?>
     <div class="additional-attributes-wrapper table-wrapper">
-        <table class="data table additional-attributes" id="product-attribute-specs-table">
+        <button type="button" class="btn btn-write-review">ask a new question</button>
+        <a href="#" class="question-text" data-toggle="modal" data-target="#questionGuideline">
+            <img src="<?= $this->getViewFileUrl('images/icon-question-small.png'); ?>"> Question guidelines
+        </a>
+        <!-- <table class="data table additional-attributes" id="product-attribute-specs-table">
             <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('More Information') ?></caption>
             <tbody>
             <?php foreach ($_additional as $_data): ?>
@@ -28,6 +32,36 @@
                 </tr>
             <?php endforeach; ?>
             </tbody>
-        </table>
+        </table> -->
     </div>
 <?php endif;?>
+
+
+<!-- Modal Question Guideline -->
+<div class="modal fade" id="questionGuideline" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <a type="button" data-dismiss="modal" class="close-btn">
+                    <img src="<?= $this->getViewFileUrl('images/icon-modal-close.png'); ?>">
+                </a>
+                <p>
+                    Questions help us make Woogie Whompers better, so first of all thanks for asking! We strive to answer questions within one business day. When writing your question or answer, please ask in English and make sure the question is relevant to this product.
+                    <br><br>
+                    We reserve the right to not post your question or answer if it contains any of the following types of content or violates other internal guidelines:
+                    <br>
+                </p>
+                <ul>
+                    <li>Full name, email addresses, URLs, phone numbers, physical addresses or other forms of contact information</li>
+                    <li>Obscenities, discriminatory language, or other language not suitable for a public forum</li>
+                    <li>Advertisements, "spam" content, or references to other products, offers, websites, or promotional details or services</li>
+                    <li>Critical or spiteful comments on other questions or answers posted on the page or their authors</li>
+                </ul>
+                <p>
+                    In addition, if you wish to share feedback with us about product selection, pricing, ordering, delivery or other customer service issues, please contact us at 281-610-8631 or feedback@woogiewhomper.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

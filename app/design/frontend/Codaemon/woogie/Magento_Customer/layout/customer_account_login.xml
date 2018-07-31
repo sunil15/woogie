@@ -9,7 +9,7 @@
     <body>
         <referenceContainer name="content">
             <!-- customer.form.login.extra -->
-            <block class="Magento\Customer\Block\Form\Login\Info" name="page_title" template="title.phtml">
+            <block class="Magento\Customer\Block\Form\Login\Info" name="page_title" template="title.phtml" before="customer.login.container">
                 <arguments>
                     <argument name="add_title" xsi:type="string">Login/Register</argument>
                 </arguments>
