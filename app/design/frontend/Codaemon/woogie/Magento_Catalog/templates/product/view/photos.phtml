@@ -7,9 +7,41 @@
 // @codingStandardsIgnoreFile
 
 /**
- * @var $block \Magento\Review\Block\Form
+ * Product additional attributes template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Attributes
  */
 ?>
+<?php
+    $_helper = $this->helper('Magento\Catalog\Helper\Output');
+    $_product = $block->getProduct();
+?>
+<div class="additional-attributes-wrapper yourPhotos" id="yourPhotos">
+    <h4>SHARE PHOTOS OR VIDEO</h4>
+    <a href="#" class="question-text" data-toggle="modal" data-target="#photoGuideline">
+        <img src="<?= $this->getViewFileUrl('images/icon-question-small.png'); ?>"> Photo and video guidelines
+    </a>
+    <p class="text-light">
+        If you would like to share photos or video of  your pet playing with their Woogie Whomper, upload them here. We might post them on this page or in our blog.
+    </p>
+    <input type="file" id="myFile" placeholder="Choose file">
+    <p class="text-bold">
+        ...OR... to share a video of your pet playing with their Woogie Whomper (ex: from YouTube), enter the URL here.
+    </p>
+    <div class="form-group">
+        <input type="text" class="form-control place-url" id="" placeholder="">
+    </div>
+    <p class="text-bold">Write a caption for this photo or video if you like.</p>
+    <div class="form-group">
+        <textarea class="form-control caption" rows="5" id=""></textarea>
+    </div>
+    <p class="text-bold">If you'd like an email when your photo is on the site or blog, please enter it here.  Your email address will not be shown in public, and never shared.</p>
+    <div class="form-group">
+        <input type="email" class="form-control email" id="" placeholder="">
+    </div>
+    <button type="button" class="btn btn-write-review">UPLOAD PHOTO AND CAPTION</button>
+</div>
+
 <div class="block review-add">
     <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Write Your Own Review') ?></strong></div>
 <div class="block-content">
@@ -22,7 +54,7 @@
         <?php if ($block->getRatings() && $block->getRatings()->getSize()): ?>
         <span id="input-message-box"></span>
         <fieldset class="field required review-field-ratings">
-            <legend class="label"><span><?php /* @escapeNotVerified */ echo __('Your Rating') ?></span></legend><br/>
+            <legend class="label"><span><?php /* @escapeNotVerified */ echo __('Your Rating') ?><span></legend><br/>
             <div class="control">
                 <div class="nested" id="product-review-table">
                     <?php foreach ($block->getRatings() as $_rating): ?>
@@ -42,9 +74,9 @@
                                 <label
                                     class="rating-<?php /* @escapeNotVerified */ echo $iterator; ?>"
                                     for="<?php echo $block->escapeHtml($_rating->getRatingCode()) ?>_<?php /* @escapeNotVerified */ echo $_option->getValue() ?>"
-                                    title="<?php /* @escapeNotVerified */ echo __('%1 %2', $iterator, $iterator > 1 ? __('stars') : __('star')) ?>"
+                                    title="<?php /* @escapeNotVerified */ echo __('%1 %2', $iterator, $iterator > 1 ? 'stars' : 'star') ?>"
                                     id="<?php echo $block->escapeHtml($_rating->getRatingCode()) ?>_<?php /* @escapeNotVerified */ echo $_option->getValue() ?>_label">
-                                    <span><?php /* @escapeNotVerified */ echo __('%1 %2', $iterator, $iterator > 1 ? __('stars') : __('star')) ?></span>
+                                    <span><?php /* @escapeNotVerified */ echo __('%1 %2', $iterator, $iterator > 1 ? 'stars' : 'star') ?></span>
                                 </label>
                             <?php $iterator++; ?>
                             <?php endforeach; ?>
@@ -77,7 +109,7 @@
     </fieldset>
     <div class="actions-toolbar review-form-actions">
         <div class="primary actions-primary">
-            <button type="submit" class="action submit btn-write-review"><span><?php /* @escapeNotVerified */ echo __('Submit Review') ?></span></button>
+            <button type="submit" class="action submit primary"><span><?php /* @escapeNotVerified */ echo __('Submit Review') ?></span></button>
         </div>
     </div>
 </form>
@@ -100,3 +132,33 @@
 <?php endif ?>
 </div>
 </div>
+
+ <!-- Modal Question Guideline -->
+    <div class="modal fade" id="photoGuideline" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <a type="button" data-dismiss="modal" class="close-btn">
+                        <img src="<?= $this->getViewFileUrl('images/icon-modal-close.png'); ?>">
+                    </a>
+                    <h4>Photo and video guidelines</h4>
+                    <p>
+                        We love to see photos and video of pets and their Woogie Whompers, so first of all thanks for sharing! Please make sure your photos or video are relevant to this product. We might post your photo or video on this page or on our blog. We will let you know when we'hv posted it if you include your email address. When writing your caption, please use English.
+                        <br><br>
+                        We reserve the right to not post your photo or video if it contains any of the following types of content or violates other internal guidelines:
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Full name, email addresses, URLs, phone numbers, physical addresses or other forms of contact information</li>
+                        <li>Obscenities, discriminatory language, or other language not suitable for a public forum</li>
+                        <li>Advertisements, "spam" content, or references to other products, offers, websites, or promotional details or services</li>
+                        <li>Critical or spiteful comments</li>
+                    </ul>
+                    <p>
+                        Photo questions? Please contact us at 281-610-8631 or feedback@woogiewhomper.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
